@@ -11,6 +11,7 @@
           mvn --version
           gradle --version
           ant -version
+          cmake --version
           echo
           echo 5. Where is the Android SDK root?
           echo $ANDROID_SDK_ROOT
