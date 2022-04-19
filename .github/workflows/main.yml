@@ -8,9 +8,14 @@ on:
 
   workflow_dispatch:
 
+
+
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ linux-latest, macos-latest ]
     steps:
       - uses: actions/checkout@v3
 
