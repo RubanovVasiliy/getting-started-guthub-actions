@@ -1,4 +1,4 @@
-name: CI
+name: Getting started
 
 on:
   push:
@@ -32,4 +32,4 @@ jobs:
           echo What about build tools?
           mvn --version
           gradle --version
-          ant --version
+          ant -version
