@@ -15,7 +15,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ linux-latest, macos-latest ]
+        os: [ ubuntu-16.04, macos-latest ]
     steps:
       - uses: actions/checkout@v3
 
@@ -27,17 +27,3 @@ jobs:
           echo Nothing to see in the milti-line script
           echo Here is what is in the folder:
           ls -a
-          
-  build-on-windows:
-    runs-on: windows-latest 
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Run a one-line script
-        run: sh ./.github/workflows/github-actions-script-windows.sh
-
-      - name: Run a multi-line script
-        run: |
-          echo Nothing to see in the milti-line script
-          echo Here is what is in the folder:
-          ls a
